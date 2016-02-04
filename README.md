@@ -9,7 +9,9 @@ In this challenge we're going to translate data from one format to another.  We'
 Write an application that dumps each comment from a Hacker News post to a CSV file.  Here are the requirements:
 
 - The name of the CSV file should be the id of the Hacker News post (e.g. `5003980.csv `).
+
 - Each line in the CSV file should include the commenter's name and the content of the comment.
+
 - The application should run using command line arguments:
 
   ```ruby
