@@ -14,7 +14,7 @@ Write an application that dumps each comment from a Hacker News post to a CSV fi
 
 - The application should run using command line arguments:
 
-  ```ruby
+  ```
   $ ruby runner.rb http://news.ycombinator.com/item?id=5003980
   
   Comments saved to the file 5003980.csv
