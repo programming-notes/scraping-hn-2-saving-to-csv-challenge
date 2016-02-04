@@ -28,7 +28,7 @@ Write an application that dumps each comment from a Hacker News post to a CSV fi
 ## Conclusion
 When we develop an application, there are a lot of design decisions to make.  What objects do we need?  How do they interact?  
 
-What design decisions did we make.  Did they lead to maintainable, changeable code?  For example, if Hacker News changed its site, would the changes affect any other objects than the object responsible for parsing the HTML?
+What design decisions did we make?  Did they lead to maintainable, changeable code?  For example, if Hacker News changed its site, would the changes affect any other objects than the object responsible for parsing the HTML?
 
 
 [csv challenge]: ../../../parsing-data-1-csv-in-csv-out-challenge
