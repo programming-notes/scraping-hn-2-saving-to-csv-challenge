@@ -1,33 +1,36 @@
-# Scraping HN 2 Saving To CSV
- 
-##Learning Competencies 
+# Hacker News HTML to CSV
 
-* Map data in a file from one format to another using ruby
-* Use the Nokogiri gem to parse CSS elements 
-* Use the OpenURI built-in module to download and read live html pages
-* Use Net::HTTP to download and read live html pages
-
-##Summary 
-
- We're going to re-use your code to scrape Hacker News to save the data to a file suitable for analyzing offline, e.g., by using Excel.
+## Summary
+In this challenge we're going to translate data from one format to another.  We'll take data that we find in Hacker News HTML and translate it into comma separated values (CSV).  Specifically, we'll be saving the comments made on a Hacker News post in a CSV file.  We should have experience [scraping Hacker News][scraping hn challenge] and [working with CSV][csv challenge] from previous challenges.
 
 
-##Releases
+## Releases
+### Release 0: HTML to CSV
+Write an application that dumps each comment from a Hacker News post to a CSV file.  Here are the requirements:
 
-###Release 0 : Saving to a CSV
+- The name of the CSV file should be the id of the Hacker News post (e.g. `5003980.csv `).
 
-Ruby comes with a [build-in CSV parser](http://ruby-doc.org/stdlib-1.9.2/libdoc/csv/rdoc/CSV.html).
+- Each line in the CSV file should include the commenter's name and the content of the comment.
 
-Write code that dumps each comment from a Hacker News post to a CSV file.  It might work like this:
+- The application should run using command line arguments:
 
-```ruby
-$ ruby hn_scraper.rb http://news.ycombinator.com/item?id=5003980
-Saved 5003980.csv...
-```
+  ```
+  $ ruby runner.rb http://news.ycombinator.com/item?id=5003980
+  
+  Comments saved to the file 5003980.csv
+  ```
 
-The `5003980.csv` file should now be a valid CSV file containing one line per comment from the passed-in URL. 
 
 
-<!-- ##Optimize Your Learning  -->
+*Note:*  We may reuse code from the [scraping HN challenge].
 
-##Resources
+
+## Conclusion
+When we develop an application, there are a lot of design decisions to make.  What objects do we need?  How do they interact?  
+
+What design decisions did we make?  Did they lead to maintainable, changeable code?  For example, if Hacker News changed its site, would the changes affect any other objects than the object responsible for parsing the HTML?
+
+
+[csv challenge]: ../../../parsing-data-1-csv-in-csv-out-challenge
+[scraping hn challenge]: ../../../scraping-hn-1-building-objects-challenge
+
